@@ -1,0 +1,52 @@
+{
+  "id": "E043",
+  "title": "희석용액 삼투압 계산기",
+  "inputs_text": "반트호프 계수 i [무차원], 몰농도 c [mol/m³], 절대온도 T [K]",
+  "formula": "Π = i c R T",
+  "output_text": "이상 희석용액 삼투압 Π [Pa]",
+  "assumptions": "i,T>0, c≥0. 희석·이상용액 근사이며 해리·비이상성은 입력 i의 적용 범위로 한정한다. mol/L 입력은 mol/m³로 1000배 변환한다.",
+  "purpose": "삼투압 계산 / 용액 물성·막 공정 기초 검산",
+  "sources": [
+    {
+      "label": "OpenStax · Colligative Properties",
+      "url": "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+    }
+  ],
+  "slug": "eng-osmotic-pressure",
+  "category": "반응",
+  "result_label": "이상 희석용액 삼투압 Π",
+  "result_dimension": "pressure",
+  "fields": [
+    {
+      "key": "i",
+      "label": "반트호프 계수 i",
+      "dimension": "ratio",
+      "example": 2,
+      "constraint": "positive",
+      "display_unit": "1",
+      "display_value": "2"
+    },
+    {
+      "key": "c",
+      "label": "몰농도 c",
+      "dimension": "concentration",
+      "example": 100,
+      "constraint": "nonnegative",
+      "display_unit": "molm3",
+      "display_value": "100"
+    },
+    {
+      "key": "t",
+      "label": "절대온도 T",
+      "dimension": "temperature",
+      "example": 300,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "300"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-osmotic-pressure/",
+  "repository": "https://github.com/NaNaCompany/eng-osmotic-pressure",
+  "condition": "",
+  "output_unit": "Pa"
+}
